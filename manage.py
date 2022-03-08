@@ -12,6 +12,7 @@ manager.add_command('server',Server)
 migrate = Migrate(app,db)
 manager.add_command('db',MigrateCommand)
 app = create_app('test')
+app = create_app('production')
 
 @manager.shell
 def make_shell_context():

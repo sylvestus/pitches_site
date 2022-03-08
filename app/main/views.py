@@ -82,11 +82,14 @@ def comments(id):
     pitch comment function that returns comment details
     """
     title="This pitch's comments"
-    comment=Comments.get_comments(id)
     pitch=Pitches.getPitchId(id)
     pitch_id=pitch.id
+    # user_det = User.get_id(id)
+    # user= user_det.username  ,user=user
+
+    comments=Comments.get_comments(id)
     
-    return render_template('comments.html',title=title,pitch_comments=comment,pitch_id=pitch_id,pitch=pitch)
+    return render_template('comments.html',title=title,comments=comments,pitch_id=pitch_id,pitch=pitch)
 @main.route('/comments/new/<int:id>',methods = ['GET','POST'])
 @login_required
 def new_comment(id):
@@ -106,8 +109,7 @@ def new_comment(id):
         new_comment.save_comment()
         return redirect(url_for('main.comments',id = pitch_id ))
 
-    
-    return render_template('new_comment.html',comment_form=form,comments=comments,pitch_id=pitch_id)
+    return render_template('new_comment.html',comment_form=form,pitch_comments=comments,pitch_id=pitch_id)
 
 
 @main.route('/user/<uname>')

@@ -9,10 +9,10 @@
           </div>
           
           
-          <!-- Login form -->
+         
           <h3> comments section</h3>
-          {%for comment in pitch_comments%}
-            {{comments.comment}}
+          {%for comment in comments%}
+            {{comment.comment}}
           {%endfor%}
         </div>
         <div clas="col-md-2">
@@ -20,7 +20,7 @@
           <div class="col-md-12">
             <h3 style="text-align:center">Comments</h3>
             <hr>
-            {{macro.displayComments(pitch_comments)}}
+            {{macro.displayComments()}}
         </div>
 
              <a href="{{url_for('main.new_comment',id=pitch_id)}}" class="btn btn-primary btn" style="font-size: 18px;">Make a comment</a>
