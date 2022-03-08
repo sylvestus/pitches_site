@@ -1,0 +1,19 @@
+{% extends 'auth/auth-base.html'%} 
+{% import 'bootstrap/wtf.html' as wtf%}
+ {% import 'macros.html' as macro%}
+{%block content %}
+<div class="container-fluid" style="background-color: antiquewhite;height: 100vh;">
+  <div class="row">  
+        <div class="col-md-9">
+            <h2 class="card-title h1-responsive "> Pickup lines Pitches</h2>
+            <hr>
+            
+                {{macro.displayPitches(pickup_pitch)}}
+        </div>
+        </div>
+    </div>
+    <div clas="col-md-2"></div>
+  </div>
+</div>
+
+{% endblock%}
