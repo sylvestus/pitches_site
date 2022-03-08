@@ -1,0 +1,68 @@
+{% extends 'base.html'%} {% import 'macros.html' as macro%}
+
+<!-- Styles block -->
+
+{% block styles%} {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}" />
+{% endblock %} {% block content %}
+<div class="container-fluid" style="background-color: antiquewhite;height: 100vh;">
+    <h3>{{main_title}}</h3>
+  <div class="row">
+      
+    <div class="col-md-3 card" style="height: 400px;">
+     
+      <h3>pickup lines</h3>
+      This category you pich your ideas on things that could be useful to know <br>
+       in an event you would like to aproach a woman,<br>
+        proffesional ideas or your personal best practices that has raised your chances. <br><br>
+
+        <a href="{{url_for('main.pickup_lines')}}" class="btn btn-primary btn-center -center" style="font-size:12px;">Pickup_lines </a>
+
+    </div>
+    <div class="col-md-3 card" style="height: 400px;">
+
+        <h3>interview pitch</h3>
+        This category you pich your ideas on stuff that could be useful in an even of an interview,<br>
+        proffesional ideas or your personal best practices <br><br><br><br>
+        <a href="{{url_for('main.interviews')}}" class="btn btn-primary btn-center -center" style="font-size:12px;">Interview </a>
+      </div>
+      <div class="col-md-3 card" style="height: 400px;">
+      
+        <h3>product pitch</h3>
+
+        This category you pich your ideas on stuff that could be useful to someone hoping to market a product <br>
+         or sell a certain idea to the general public, any product really.<br>
+        proffesional ideas or your personal best practices. <br>
+        <a href="{{url_for('main.products')}}" class="btn btn-primary btn-center -center" style="font-size:12px;">Products </a> 
+      </div>
+      <div class="col-md-3 card" style="height: 400px;">
+        
+        <h3>promotion pitch</h3>
+
+        This category you pich your ideas on stuff that could be useful in an even of a promotion of someone something or an offer,<br>
+        proffesional ideas or your personal best practices. <br><br><br>
+        <a href="{{url_for('main.promotions')}}" class="btn btn-primary btn-center -center" style="font-size:12px;">Promotions </a>
+      </div>
+
+  </div>
+
+  <div class="row">
+      <div class="col" style="text-align: center; ">
+
+          <p> <br> In life, you only have 60 seconds to impress someone. 1 minute can make or break you. <br>
+             How do we make sure that you use your 1 minute to actually say something meaningful? <br>
+             pitch with us on the categories above abou how you aproach various things. <br> <br>
+
+
+             <a href="{{url_for('main.new_pitch')}}" class="btn btn-primary btn-center -center" style="font-size:12px;"> Create a new pitch</a>
+
+
+        </p>
+      </div>
+  </div>
+</div>
+
+
+<!-- <h1>Hello please add pitches it seems we have none yet</h1> -->
+
+{% endblock%}
