@@ -1,0 +1,37 @@
+{% macro displayPitches(pitches_list)%}
+{%for pitch in pitches_list%}
+
+<div class=" col-lg-6 movie-card"style="height: 500px;">
+    <div class="card col-sm mt-2"style="height: 500px;">
+        <div class="well  p-3" style="text-align: left;">
+            <h3 style="font-weight: 500; ">{{pitch.title}}</h3>
+            <hr>
+            <h3 style="font-weight: 500; ">{{pitch.pitch}}</h3>
+            <hr>
+            <p style="font-weight: 500; "><span >Posted by :
+                <h3 style="font-weight: 500; ">{{pitch.current_user}}</h3>
+                <hr>
+                </span> 
+            </p>
+
+                <a href="{{url_for('main.comments',id=pitch.id)}}" class="btn btn-primary btn" style="font-size: 18px;">Comment</a>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{%endmacro%}
+
+{%macro displayComments(comments_list)%}
+{%for comment in comments_list%}
+
+<div class="col-md-12">
+    <p>{{comment.comment}}</p>
+    <h5><span>By :
+    </span> <span style=" font-size:24px">{{comment.user.username}}
+    </span></h5>
+    <hr>
+</div>
+{%endfor%}
+{%endmacro%}
+
+
