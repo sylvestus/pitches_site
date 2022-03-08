@@ -1,0 +1,48 @@
+{% extends 'base.html'%} {% import 'macros.html' as macro%}
+
+
+{%block content%}
+
+<div class="container-fluid" style="background-color: antiquewhite;height: 100vh;"> 
+    <div class="row">
+<h2>promotion pitches</h2>
+   <div class="col-md-9" >
+    <h2 class="card-title h1-responsive ">
+    <hr>
+    {{macro.displayPitches(promotion_pitch)}}
+   </div>
+</div>
+
+
+<div class="row">
+    <h2>product pitches</h2>
+       <div class="col-md-9" >
+        <h2 class="card-title h1-responsive ">
+        <hr>
+        {{macro.displayPitches(product_pitch)}}
+       </div>
+    </div>
+
+    <div class="row">
+        <h2>pickup lines pitches</h2>
+           <div class="col-md-9" >
+            <h2 class="card-title h1-responsive ">
+            <hr>
+            {{macro.displayPitches(pickup_pitch)}}
+           </div>
+        </div>
+
+
+        <div class="row">
+            <h2>Interview pitches</h2>
+               <div class="col-md-9" >
+                <h2 class="card-title h1-responsive ">
+                <hr>
+                {{macro.displayPitches(interview_pitch)}}
+               </div>
+            </div>
+
+</div>
+
+
+{%endblock%}
