@@ -21,13 +21,13 @@
 {% endfor %}
 {%endmacro%}
 
-{%macro displayComments(comments)%}
-{%for comment in comments%}
+{%macro displayComments(pitch_comments)%}
+{%for comment in pitch_comments%}
 
 <div class="col-md-12">
     <p>{{comment.comment}}</p>
     <h5><span>By :
-    </span> <span style=" font-size:24px">{{comment.user.username}}
+    </span> <span style=" font-size:24px">
     </span></h5>
     <hr>
 </div>

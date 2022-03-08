@@ -6,7 +6,9 @@ subject_pref = "pitches"
 sender_email = "silvanussigei19960@gmail.com"
 
 def mail_message(subject,template,to,**kwargs):
-    email= Message(subject_pref+subject,sender=sender_email,recipients=[to])
-    email.body=render_template(template + ".txt",**kwargs)
-    email.html= render_template(template + ".html",**kwargs)
+    sender_email = 'silvanussigei19960@gmail.com'
+    email = Message(subject, sender=sender_email, recipients=[to])
+    email.body= render_template(template + ".txt",**kwargs)
+    email.html = render_template(template + ".html",**kwargs)
     mail.send(email)
+

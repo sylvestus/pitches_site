@@ -122,7 +122,7 @@ class Comments(db.Model):
     @classmethod
     def get_comments(cls,id):
 
-        comments = Comments.query.order_by(Comments.posted).filter_by(pitches_id=id).all()
+        comments = Comments.query.filter_by(pitches_id=id).all()
         return comments
 
 class PhotoProfile(db.Model):
