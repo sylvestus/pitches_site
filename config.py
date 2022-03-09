@@ -5,6 +5,7 @@ class Config:
     UPLOADED_PHOTOS_DEST ='app/static/photos'
     SECRET_KEY = os.environ.get("SECRET_KEY")
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    DATABASE_URL='postgres://kikactyehelpnw:fa25e0d2833d8c70f2f61504993e9cf287cd390e0c570a1a4712f8cf41c952bd@ec2-52-44-209-165.compute-1.amazonaws.com:5432/df6vtp2t5dblt2'
 
     
     
