@@ -9,7 +9,11 @@
           </div>
           
           <h3> comments section</h3>
+          {% for comments in pitch_comments %}
+        
+          <ul><li>{{comments.comment}}</li></ul>
           
+          {% endfor %}
         </div>
         <div clas="col-md-2">
 

@@ -89,8 +89,8 @@ def comments(id):
 
     comments=Comments.get_comments(id)
     
-    return render_template('comments.html',title=title,pitch_comments=comments,pitch_id=pitch_id,pitch=pitch)
-
+    # return render_template('comments.html',title=title,pitch_comments=comments,pitch_id=pitch_id,pitch=pitch)
+    return render_template('comments.html',pitch_comments=comments,title=title,pitch_id=pitch_id)
 
 @main.route('/comments/new/<int:id>',methods = ['GET','POST'])
 @login_required

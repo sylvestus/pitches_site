@@ -27,7 +27,7 @@ The one minute rule: 'In life, you only have 60 seconds to impress someone. 1 mi
 ## Setup/Installation
 To user this simple python a application, first make sure you have met the recquirement provided above.
 Then follow the following 2 steps:
-* **1** : Clone this repository using **`https://github.com/sylvestus/pitchSite.git`**, or downloading a ZIP file of the code. If you decide  to download it as a .zip file, you will have to extract files to your preferred location.
+* **1** : Clone this repository using **`https://github.com/sylvestus/pitches_site.git`**, or downloading a ZIP file of the code. If you decide  to download it as a .zip file, you will have to extract files to your preferred location.
 * **2** : Open the terminal, go to the project directory and run the following commands: **`chmod +x start.sh`** and **`./start.sh`** each one at a time to launch the program.
 ## User Stories
 The user is able to;
