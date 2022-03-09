@@ -7,6 +7,7 @@ class Config:
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URI")
     
     
+    
     #email configurations
     MAIL_SERVER = 'smtp.google.com'
     MAIL_PORT = 587
