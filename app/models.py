@@ -57,7 +57,6 @@ class User(UserMixin,db.Model):
         return f'User {self.username}' 
 
 
-
 class Pitches(db.Model):
 
     __tablename__ = 'pitches_table'
@@ -73,7 +72,6 @@ class Pitches(db.Model):
     comment =db.relationship('Comments', backref='pitch', lazy='dynamic')
     
     # new_pitch= pitches_table(pitch_id="",pitch_title="interview",pitch_category="interview",the_pitch="hello iam ian",posted="",user_id="",comment="")
-
 
     def save_pitch(self):
         db.session.add(self)
@@ -99,7 +97,6 @@ class Pitches(db.Model):
         Pitches.all_pitches.clear()
     def __repr__(self):
         return f'Pitches {self.title}'
-
 
 
 class Comments(db.Model):
